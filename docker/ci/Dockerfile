@@ -26,4 +26,6 @@ COPY install_go.sh /tmp/install_go.sh
 RUN "/tmp/install_go.sh" "/tmp"
 ENV PATH "$PATH:/root/.go/bin"
 
+RUN go install -tags extended github.com/gohugoio/hugo@latest
+
 ENTRYPOINT []
